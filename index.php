@@ -31,7 +31,7 @@ final class VCHAT_ADDON {
     public function __construct(){
         add_action( 'init', [ $this, 'add_user_role'] );
 
-        if( current_user_can('manage_options') ){
+        if( is_admin() || is_super_admin() ){
             new AdminMenu;
         }
     }
