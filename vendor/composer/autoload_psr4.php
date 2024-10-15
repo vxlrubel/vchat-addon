@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'vchat\\inc\\' => array($baseDir . '/inc'),
+    'VChat\\Inc\\' => array($baseDir . '/inc'),
 );

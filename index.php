@@ -18,7 +18,7 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
 }
 
 
-use vchat\inc\AdminMenu;
+use VChat\Inc\AdminMenu;
 
 
 final class VCHAT_ADDON {
