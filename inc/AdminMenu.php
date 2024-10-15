@@ -1,6 +1,6 @@
 <?php
 
-namespace vchat\inc;
+namespace VChat\Inc;
 
 defined('ABSPATH') || exit;
 
