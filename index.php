@@ -19,6 +19,7 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
 
 
 use VChat\Inc\AdminMenu;
+use VChat\Inc\Api\RegisterApi;
 
 
 final class VCHAT_ADDON {
@@ -31,9 +32,10 @@ final class VCHAT_ADDON {
     public function __construct(){
         add_action( 'init', [ $this, 'add_user_role'] );
 
-        if( is_admin() || is_super_admin() ){
+        if( is_admin() ){
             new AdminMenu;
         }
+        new RegisterApi;
     }
 
     public function add_user_role(){
