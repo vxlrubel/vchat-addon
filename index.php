@@ -27,8 +27,12 @@ final class VCHAT_ADDON {
     // set instance
     private static $instance;
 
-
-
+    
+    /**
+     * Method __construct
+     *
+     * @return void
+     */
     public function __construct(){
         add_action( 'init', [ $this, 'add_user_role'] );
 
@@ -38,6 +42,12 @@ final class VCHAT_ADDON {
         new RegisterApi;
     }
 
+        
+    /**
+     * Method add_user_role
+     *
+     * @return void
+     */
     public function add_user_role(){
         add_role( 'basic_user', 'Basic User', [
             'read' => true,

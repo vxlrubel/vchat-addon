@@ -9,7 +9,12 @@ class AdminMenu{
     public function __construct(){
         add_action( 'admin_menu', [$this, 'register_admin_menu'] );
     }
-
+    
+    /**
+     * Method register_admin_menu
+     *
+     * @return void
+     */
     public function register_admin_menu(){
         add_menu_page(
             'VChat panel',              // Page title
@@ -21,7 +26,12 @@ class AdminMenu{
             6                           // Position in the menu order
         );
     }
-
+    
+    /**
+     * Method render_view
+     *
+     * @return void
+     */
     public function render_view(){ ?>
         <div class="wrap">
             <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
